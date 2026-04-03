@@ -75,5 +75,5 @@ public class FinancialRecord {
 	public void setNotes(String notes) {
 		this.notes = notes;
 	}
-     
+ 
 }

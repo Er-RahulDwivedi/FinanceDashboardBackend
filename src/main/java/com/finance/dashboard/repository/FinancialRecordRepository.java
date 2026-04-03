@@ -16,6 +16,7 @@ public interface FinancialRecordRepository extends JpaRepository<FinancialRecord
 
     @Query("SELECT new com.finance.dashboard.dto.CategoryTotalDto(f.category, SUM(f.amount)) " +
            "FROM FinancialRecord f WHERE f.type = 'EXPENSE' GROUP BY f.category")
+    
     List<CategoryTotalDto> getExpenseCategoryTotals();
 
     List<FinancialRecord> findTop5ByOrderByDateDesc();
